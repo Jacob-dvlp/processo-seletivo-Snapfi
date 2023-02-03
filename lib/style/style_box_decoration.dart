@@ -9,11 +9,9 @@ class BoxDecorations {
     return _instance!;
   }
 
-  ShapeBorder decoration() {
-    return RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(12),
-    );
-  }
+  ShapeBorder decoration(double radius) => RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(radius),
+      );
 }
 
 extension ColorsAppExtensions on BuildContext {

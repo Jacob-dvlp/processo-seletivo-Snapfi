@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'page/home/home_page.dart';
+import 'routes/routes_app.dart';
 
 class AppPage extends StatelessWidget {
   const AppPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: "/",
+      routes: AppRoutes.routes,
     );
   }
 }
