@@ -7,7 +7,6 @@ import '../../style/style_text.dart';
 class CustomFormWidget extends StatelessWidget {
   final String textdiurno;
   final String textnoturno;
-  
 
   const CustomFormWidget(
       {super.key, required this.textdiurno, required this.textnoturno});
@@ -33,6 +32,7 @@ class CustomFormWidget extends StatelessWidget {
           ),
           SizedBox(
             child: TextFormField(
+              keyboardType: TextInputType.number,
               cursorColor: const Color(0XFF02020A),
               style: context.style.textMedium(const Color(0XFF02020A), 15),
               decoration: context.input.inputDecoration(labelText: true),
@@ -55,6 +55,7 @@ class CustomFormWidget extends StatelessWidget {
           ),
           SizedBox(
             child: TextFormField(
+              keyboardType: TextInputType.number,
               cursorColor: const Color(0XFF02020A),
               style: context.style.textMedium(const Color(0XFF02020A), 15),
               decoration: context.input.inputDecoration(labelText: true),
@@ -76,6 +77,7 @@ class CustomFormWidget extends StatelessWidget {
                 width: 111,
                 height: 44,
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
                   initialValue: "18:00",
                   style: context.style.textMedium(const Color(0XFF02020A), 15),
                   decoration: context.input.inputDecoration(labelText: false),
@@ -88,6 +90,7 @@ class CustomFormWidget extends StatelessWidget {
                 width: 111,
                 height: 44,
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
                   initialValue: "18:00",
                   style: context.style.textMedium(const Color(0XFF02020A), 15),
                   decoration: context.input.inputDecoration(labelText: false),

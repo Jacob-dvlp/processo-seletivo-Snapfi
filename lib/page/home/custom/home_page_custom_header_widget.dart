@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../../style/style_colors.dart';
 import '../../../style/style_text.dart';
 import '../../widget/costum_painter_widget.dart';
 
 class HomePageCustomHeaderWidget extends StatelessWidget {
-  const HomePageCustomHeaderWidget({Key? key}) : super(key: key);
+  final Color primaryColor;
+  final Color secondaryColor;
+  final int colortext;
+
+  const HomePageCustomHeaderWidget(
+      {Key? key,
+      required this.primaryColor,
+      required this.secondaryColor,
+      required this.colortext})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +26,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
               tileMode: TileMode.mirror,
               begin: Alignment.bottomCenter,
               colors: [
-                context.colors.primary,
-                context.colors.secondary,
+                primaryColor,
+                secondaryColor,
               ]),
         ),
         child: Padding(
@@ -37,7 +45,7 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                     Text(
                       "Saldo Disponível",
                       style: context.style
-                          .textExtraBold(Colors.white, FontWeight.w700, 23),
+                          .textExtraBold(Color(colortext), FontWeight.w700, 23),
                     ),
                     SizedBox(
                       child: Image.asset("assets/icons/cultar.png"),
@@ -56,14 +64,16 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                         children: [
                           Text(
                             "Saldo na conta",
-                            style: context.style.textMedium(Colors.white, 12),
+                            style:
+                                context.style.textMedium(Color(colortext), 12),
                           ),
                           const SizedBox(
                             height: 7.0,
                           ),
                           Text(
                             "R\$•••••••••",
-                            style: context.style.textMedium(Colors.white, 15),
+                            style:
+                                context.style.textMedium(Color(colortext), 15),
                           )
                         ],
                       ),
@@ -76,7 +86,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 35),
                             child: Text(
                               "Saldo nas caixinhas",
-                              style: context.style.textMedium(Colors.white, 12),
+                              style: context.style
+                                  .textMedium(Color(colortext), 12),
                             ),
                           ),
                           const SizedBox(
@@ -84,7 +95,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                           ),
                           Text(
                             "R\$•••••••••",
-                            style: context.style.textMedium(Colors.white, 15),
+                            style:
+                                context.style.textMedium(Color(colortext), 15),
                           )
                         ],
                       ),

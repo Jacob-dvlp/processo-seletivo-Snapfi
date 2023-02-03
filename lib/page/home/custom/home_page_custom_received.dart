@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../style/style_text.dart';
 import '../../../style/style_box_decoration.dart';
+import '../../../style/style_text.dart';
 import '../../widget/custom_card_widge.dart';
 
 class HomePageCustomReceived extends StatelessWidget {

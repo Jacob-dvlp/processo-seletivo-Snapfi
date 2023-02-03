@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../style/style_colors.dart';
 import 'home_page_custom_header_widget.dart';
 import 'home_page_custom_pay_widget.dart';
 import 'home_page_custom_received.dart';
@@ -12,10 +13,14 @@ class HomePageCustomBodyWidgets extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          HomePageCustomHeaderWidget(),
-          HomePageCustomPayWidget(),
-          HomePageCustomReceived()
+        children: [
+          HomePageCustomHeaderWidget(
+            colortext: 0xFFFFFFFF.toInt(),
+            primaryColor: context.colors.primary,
+            secondaryColor: context.colors.secondary,
+          ),
+          const HomePageCustomPayWidget(),
+          const HomePageCustomReceived()
         ],
       ),
     );
