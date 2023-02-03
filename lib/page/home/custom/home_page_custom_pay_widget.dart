@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../../../style/style_box_decoration.dart';
-import '../../../style/style_colors.dart';
 import '../../../style/style_text.dart';
 import '../../widget/custom_card_widge.dart';
 
 class HomePageCustomPayWidget extends StatelessWidget {
-  const HomePageCustomPayWidget({Key? key}) : super(key: key);
+  final int valueColorTextH1;
+  final int valueColorTextH2;
+  final int valueColorIconsPay;
+  const HomePageCustomPayWidget(
+      {Key? key,
+      required this.valueColorTextH1,
+      required this.valueColorIconsPay,
+      required this.valueColorTextH2})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +27,8 @@ class HomePageCustomPayWidget extends StatelessWidget {
         children: [
           Text(
             "Pagar",
-            style:
-                context.style.textExtraBold(Colors.black, FontWeight.w600, 20),
+            style: context.style
+                .textExtraBold(Color(valueColorTextH1), FontWeight.w600, 20),
           ),
           Card(
             shape: context.decorationBox.decoration(12),
@@ -34,7 +41,9 @@ class HomePageCustomPayWidget extends StatelessWidget {
                     SizedBox(
                       width: 41,
                       height: 41,
-                      child: Image.asset("assets/icons/icon_home2.png"),
+                      child: Image.asset(
+                        "assets/icons/icon_home2.png",
+                      ),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +51,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                         Text(
                           "USAR CHAVE PIX",
                           style: context.style.textLight(
-                              context.colors.secondary, FontWeight.bold, 12),
+                              Color(valueColorTextH1), FontWeight.bold, 12),
                         ),
                         const SizedBox(
                           height: 9,
@@ -50,7 +59,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                         Text(
                           "CPF/CNPJ, e-mail, telefone ou outra chave",
                           style: context.style.textLight(
-                            const Color(0XFF02020A),
+                            Color(valueColorTextH2),
                             FontWeight.w300,
                             13,
                           ),
@@ -66,15 +75,18 @@ class HomePageCustomPayWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomCardWidge(
-                img: Image.asset("assets/icons/icon_home1.png"),
+                img: Image.asset("assets/icons/icon_home1.png",
+                    color: Color(valueColorIconsPay)),
                 text: "Ler QR CODE",
               ),
               CustomCardWidge(
-                img: Image.asset("assets/icons/icon_home3.png"),
+                img: Image.asset("assets/icons/icon_home3.png",
+                    color: Color(valueColorIconsPay)),
                 text: "Pix Copiar e Colar",
               ),
               CustomCardWidge(
-                img: Image.asset("assets/icons/icon_home_dolar1.png"),
+                img: Image.asset("assets/icons/icon_home_dolar1.png",
+                    color: Color(valueColorIconsPay)),
                 text: "Pagar Boleto",
               )
             ],

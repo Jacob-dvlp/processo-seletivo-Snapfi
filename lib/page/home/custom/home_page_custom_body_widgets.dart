@@ -19,7 +19,10 @@ class HomePageCustomBodyWidgets extends StatelessWidget {
             primaryColor: context.colors.primary,
             secondaryColor: context.colors.secondary,
           ),
-          const HomePageCustomPayWidget(),
+          HomePageCustomPayWidget(
+              valueColorIconsPay: 0XFFFF5CBD.toInt(),
+              valueColorTextH1: 0xFF000000.toInt(),
+              valueColorTextH2: 0xFF000000.toInt()),
           const HomePageCustomReceived()
         ],
       ),
