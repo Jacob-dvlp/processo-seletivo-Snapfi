@@ -15,7 +15,7 @@ class LimitePageCustomHeaderWidget extends StatelessWidget {
           child: const Icon(Icons.arrow_back_ios_new),
         ),
         const SizedBox(
-          height: 53.25,
+          height: 33.25,
         ),
         Text(
           "Limites das transações Pix",
@@ -26,7 +26,7 @@ class LimitePageCustomHeaderWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 24,
+          height: 14,
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width / 1.5,
@@ -36,13 +36,8 @@ class LimitePageCustomHeaderWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 67,
+          height: 47,
         ),
-        Text(
-          "Limite do período diurno",
-          style: context.style
-              .textSemiBold(FontWeight.w600, const Color(0XFF26262D), 20),
-        )
       ],
     );
   }

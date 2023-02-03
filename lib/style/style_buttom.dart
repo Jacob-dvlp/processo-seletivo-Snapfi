@@ -19,3 +19,7 @@ class StyleButtom {
 OutlineInputBorder defaultInputBorder(Color color) => OutlineInputBorder(
     borderRadius: BorderRadius.circular(6),
     borderSide: BorderSide(color: color));
+
+extension StyleButtomextension on BuildContext {
+  StyleButtom get decorationButtom => StyleButtom.i;
+}

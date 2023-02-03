@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../style/style_colors.dart';
 import '../../../style/style_box_decoration.dart';
+import '../../../style/style_colors.dart';
 import '../../../style/style_text.dart';
 import '../../widget/custom_card_widge.dart';
 
@@ -11,7 +11,10 @@ class HomePageCustomPayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 17.71, top: 18),
+      padding: const EdgeInsets.only(
+        left: 16,
+        right: 17.71,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
