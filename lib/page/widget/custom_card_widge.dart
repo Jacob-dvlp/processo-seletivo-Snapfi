@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../helpers/app_helpe.dart';
 import '../../style/style_box_decoration.dart';
-import '../../style/style_colors.dart';
 import '../../style/style_text.dart';
 
 class CustomCardWidge extends StatelessWidget {
@@ -19,7 +19,7 @@ class CustomCardWidge extends StatelessWidget {
       child: Card(
         shape: context.decorationBox.decoration(6),
         child: SizedBox(
-          width: MediaQuery.of(context).size.width,
+          width: context.sizeDevice.width,
           child: Padding(
             padding: const EdgeInsets.only(
               top: 12,
@@ -52,7 +52,10 @@ class CustomCardWidge extends StatelessWidget {
 
 class CustomCardWidgefooter extends StatelessWidget {
   final String text;
-  const CustomCardWidgefooter({Key? key, required this.text}) : super(key: key);
+  final int colorFooterHex;
+  const CustomCardWidgefooter(
+      {Key? key, required this.text, required this.colorFooterHex})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -61,18 +64,18 @@ class CustomCardWidgefooter extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 8, bottom: 8, left: 8, right: 8),
         child: SizedBox(
-          width: MediaQuery.of(context).size.width,
+          width: context.sizeDevice.width,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 text,
-                style: context.style.textExtraBold(
-                    context.colors.secondary, FontWeight.w700, 12),
+                style: context.style
+                    .textExtraBold(Color(colorFooterHex), FontWeight.w700, 12),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: context.colors.secondary,
+                color: Color(colorFooterHex),
               )
             ],
           ),

@@ -15,10 +15,16 @@ class LimitPageCustomBodyWidgets extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              LimitePageCustomHeaderWidget(),
+              LimitePageCustomHeaderWidget(
+                  key: Key("formHeader"),
+                  colorTextH4: 0XFF4A4A50,
+                  colortextH1: 0xFF000000),
               CustomFormWidget(
                 textdiurno: "Limite máximo de transação diurna",
                 textnoturno: "Limite máximo de transação noturna",
+                colorBtnHex: 0XFFD33091,
+                colortextForm: 0XFF26262D,
+                key: Key("form"),
               )
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../helpers/app_helpe.dart';
 import '../../../style/style_box_decoration.dart';
 import '../../../style/style_text.dart';
 import '../../widget/custom_card_widge.dart';
@@ -33,7 +34,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
           Card(
             shape: context.decorationBox.decoration(12),
             child: SizedBox(
-              width: MediaQuery.of(context).size.width,
+              width: context.sizeDevice.width,
               child: Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 12),
                 child: Row(

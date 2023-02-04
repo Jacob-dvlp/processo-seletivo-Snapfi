@@ -4,8 +4,8 @@ import '../../../style/style_text.dart';
 import '../../widget/costum_painter_widget.dart';
 
 class HomePageCustomHeaderWidget extends StatelessWidget {
-  final Color primaryColor;
-  final Color secondaryColor;
+  final int primaryColor;
+  final int secondaryColor;
   final int colortext;
 
   const HomePageCustomHeaderWidget(
@@ -26,8 +26,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
               tileMode: TileMode.mirror,
               begin: Alignment.bottomCenter,
               colors: [
-                primaryColor,
-                secondaryColor,
+                Color(primaryColor),
+                Color(secondaryColor),
               ]),
         ),
         child: Padding(
