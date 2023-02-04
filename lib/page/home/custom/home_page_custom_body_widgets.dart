@@ -15,20 +15,24 @@ class HomePageCustomBodyWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           HomePageCustomHeaderWidget(
+            key: Key("headerhome"),
             colortext: 0xFFFFFFFF,
             primaryColor: 0XFFFF5CBD,
             secondaryColor: 0XFFD33091,
           ),
           HomePageCustomPayWidget(
+            key: Key("bodyhome1"),
             valueColorIconsPay: 0XFFFF5CBD,
             valueColorTextH1: 0xFF000000,
             valueColorTextH2: 0xFF000000,
           ),
           HomePageCustomReceived(
+            key: Key("bodyhome2"),
             colorIconHex: 0xFF000000,
             colorTextHex: 0xFF000000,
           ),
           HomePageCustomFooterWidget(
+            key: Key("footerhome"),
             colorFooterHex: 0XFFD33091,
           )
         ],

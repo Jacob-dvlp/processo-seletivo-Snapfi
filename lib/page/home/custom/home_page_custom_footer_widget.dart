@@ -14,14 +14,19 @@ class HomePageCustomFooterWidget extends StatelessWidget {
       child: Column(
         children: [
           CustomCardWidgefooter(
-              text: "Transferências Agendadas", colorFooterHex: colorFooterHex),
+              key: const Key("transferenciaagenda"),
+              text: "Transferências Agendadas",
+              colorFooterHex: colorFooterHex),
           CustomCardWidgefooter(
+            key: const Key("registrarchave"),
             text: "Registrar ou trazer chaves ",
             colorFooterHex: colorFooterHex,
           ),
           InkWell(
+              key: const Key("nextpage"),
               onTap: () => Navigator.pushNamed(context, "/limit"),
               child: CustomCardWidgefooter(
+                key: const Key("limitepix"),
                 text: "Configurar Limites Pix",
                 colorFooterHex: colorFooterHex,
               )),

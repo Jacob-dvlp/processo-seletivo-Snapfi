@@ -20,6 +20,7 @@ class HomePageCustomReceived extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
+            key: const Key("receber"),
             "Receber",
             style: context.style
                 .textExtraBold(Color(colorTextHex), FontWeight.w600, 20),
@@ -44,6 +45,7 @@ class HomePageCustomReceived extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          key: const Key("qrcodepermanente"),
                           "Gerar QR Code Permanente",
                           style: context.style.textLight(
                               Color(colorTextHex), FontWeight.bold, 12),
@@ -52,6 +54,7 @@ class HomePageCustomReceived extends StatelessWidget {
                           height: 9,
                         ),
                         Text(
+                          key: const Key("qrcodisponivel"),
                           "QR Code que sempre está disponível",
                           style: context.style.textLight(
                             Color(colorTextHex),
@@ -75,12 +78,14 @@ class HomePageCustomReceived extends StatelessWidget {
                   color: Color(colorIconHex),
                 ),
                 text: "Gerar QR CODE de uso único",
+                key: const Key("qrcodeunico"),
               ),
               CustomCardWidge(
                 img: Image.asset(
                   "assets/icons/icon_home2.png",
                   color: Color(colorIconHex),
                 ),
+                key: const Key("receberpix"),
                 text: "Receber com Chave Pix",
               )
             ],

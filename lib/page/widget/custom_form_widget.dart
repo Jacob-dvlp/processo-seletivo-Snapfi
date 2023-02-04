@@ -38,7 +38,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
       );
     }
     isLoadingForm(true);
-    Future.delayed(const Duration(seconds: 6), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Navigator.pushReplacementNamed(context, "/");
     });
     isLoadingForm(false);
@@ -165,6 +165,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
                     )
                   : Center(
                       child: CircularProgressIndicator(
+                        key: const Key("progress"),
                         backgroundColor: Color(widget.colorBtnHex),
                         color: Colors.white,
                       ),

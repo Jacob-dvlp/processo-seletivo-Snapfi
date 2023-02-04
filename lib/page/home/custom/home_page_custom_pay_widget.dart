@@ -27,6 +27,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
+            key: const Key("textpegar"),
             "Pagar",
             style: context.style
                 .textExtraBold(Color(valueColorTextH1), FontWeight.w600, 20),
@@ -50,6 +51,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          key: const Key("textchavepix"),
                           "USAR CHAVE PIX",
                           style: context.style.textLight(
                               Color(valueColorTextH1), FontWeight.bold, 12),
@@ -58,6 +60,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                           height: 9,
                         ),
                         Text(
+                          key: const Key("textcpf"),
                           "CPF/CNPJ, e-mail, telefone ou outra chave",
                           style: context.style.textLight(
                             Color(valueColorTextH2),
@@ -79,16 +82,19 @@ class HomePageCustomPayWidget extends StatelessWidget {
                 img: Image.asset("assets/icons/icon_home1.png",
                     color: Color(valueColorIconsPay)),
                 text: "Ler QR CODE",
+                key: const Key("textqrcode"),
               ),
               CustomCardWidge(
                 img: Image.asset("assets/icons/icon_home3.png",
                     color: Color(valueColorIconsPay)),
                 text: "Pix Copiar e Colar",
+                key: const Key("textcopiar"),
               ),
               CustomCardWidge(
                 img: Image.asset("assets/icons/icon_home_dolar1.png",
                     color: Color(valueColorIconsPay)),
                 text: "Pagar Boleto",
+                key: const Key("textboleto"),
               )
             ],
           )

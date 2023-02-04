@@ -43,6 +43,7 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
+                      key: const Key("saldodisponivel"),
                       "Saldo Disponível",
                       style: context.style
                           .textExtraBold(Color(colortext), FontWeight.w700, 23),
@@ -64,6 +65,7 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                         children: [
                           Text(
                             "Saldo na conta",
+                            key: const Key("saldonaconta"),
                             style:
                                 context.style.textMedium(Color(colortext), 12),
                           ),
@@ -85,6 +87,7 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 35),
                             child: Text(
+                              key: const Key("saldonascaixinhas"),
                               "Saldo nas caixinhas",
                               style: context.style
                                   .textMedium(Color(colortext), 12),
