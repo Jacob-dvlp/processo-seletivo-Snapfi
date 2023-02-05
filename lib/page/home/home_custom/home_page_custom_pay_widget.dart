@@ -23,7 +23,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            key: const Key("textpegar"),
+            key: const Key("textpagar"),
             "Pagar",
             style: context.style
                 .textExtraBold(HexColor(valueColorTextH1), FontWeight.w600, 20),

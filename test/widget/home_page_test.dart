@@ -21,13 +21,11 @@ void main() {
 
     expect(find.byKey(const Key("saldonascaixinhas")), findsOneWidget);
 
-    expect(find.byKey(const Key("textpegar")), findsOneWidget);
+    expect(find.byKey(const Key("textpagar")), findsOneWidget);
 
     expect(find.byKey(const Key("textchavepix")), findsOneWidget);
 
     expect(find.byKey(const Key("textcpf")), findsOneWidget);
-
-    expect(find.byKey(const Key("textpegar")), findsOneWidget);
 
     expect(find.byKey(const Key("textcopiar")), findsOneWidget);
 
