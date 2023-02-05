@@ -1,15 +1,11 @@
-// To parse this JSON data, do
-//
-//     final serverDriveUi = serverDriveUiFromJson(jsonString);
-
 import 'dart:convert';
 
-List<ServerDriveUi> serverDriveUiFromJson(String str) =>
-    List<ServerDriveUi>.from(
-        json.decode(str).map((x) => ServerDriveUi.fromJson(x)));
+List<ModelServerDriveUiHomePage> serverDriveUiFromJson(String str) =>
+    List<ModelServerDriveUiHomePage>.from(
+        json.decode(str).map((x) => ModelServerDriveUiHomePage.fromJson(x)));
 
-class ServerDriveUi {
-  ServerDriveUi({
+class ModelServerDriveUiHomePage {
+  ModelServerDriveUiHomePage({
     required this.container1,
     required this.container2,
     required this.container3,
@@ -21,7 +17,8 @@ class ServerDriveUi {
   Container3 container3;
   Container4 container4;
 
-  factory ServerDriveUi.fromJson(Map<String, dynamic> json) => ServerDriveUi(
+  factory ModelServerDriveUiHomePage.fromJson(Map<String, dynamic> json) =>
+      ModelServerDriveUiHomePage(
         container1: Container1.fromJson(json["container1"]),
         container2: Container2.fromJson(json["container2"]),
         container3: Container3.fromJson(json["container3"]),

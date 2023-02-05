@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-
-import '../../../helpers/app_helpe.dart';
 import '../../../style/style_box_decoration.dart';
-import '../../../style/style_text.dart';
-import '../../widget/custom_card_widge.dart';
+import 'imports.dart';
 
 class HomePageCustomReceived extends StatelessWidget {
   final String colorIconHex;

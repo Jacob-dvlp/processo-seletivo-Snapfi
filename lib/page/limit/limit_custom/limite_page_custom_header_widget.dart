@@ -1,11 +1,8 @@
-import 'package:flutter/material.dart';
-
-import '../../../helpers/app_helpe.dart';
-import '../../../style/style_text.dart';
+import '../../home/home_custom/imports.dart';
 
 class LimitePageCustomHeaderWidget extends StatelessWidget {
-  final int colortextH1;
-  final int colorTextH4;
+  final String colortextH1;
+  final String colorTextH4;
   const LimitePageCustomHeaderWidget(
       {Key? key, required this.colortextH1, required this.colorTextH4})
       : super(key: key);
@@ -25,7 +22,7 @@ class LimitePageCustomHeaderWidget extends StatelessWidget {
         Text(
           "Limites das transações Pix",
           style: context.style.textExtraBold(
-            Color(colortextH1),
+            HexColor(colortextH1),
             FontWeight.bold,
             23,
           ),
@@ -37,7 +34,7 @@ class LimitePageCustomHeaderWidget extends StatelessWidget {
           width: context.sizeDevice.width / 1.5,
           child: Text(
             """Vocês pode ajustar os limites de transação Pix durante o dia e no período noturno.""",
-            style: context.style.textMedium(Color(colorTextH4), 12),
+            style: context.style.textMedium(HexColor(colorTextH4), 12),
           ),
         ),
         const SizedBox(

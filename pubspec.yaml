@@ -14,11 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   cupertino_icons: ^1.0.2
-  firebase_core: ^2.4.1
-  firebase_remote_config: ^3.0.9
-  hexcolor: ^3.0.1
  
   
 
@@ -28,9 +24,8 @@ dev_dependencies:
   integration_test:
     sdk: flutter  
 
-
   flutter_lints: ^2.0.0
-  dynamic_widget: ^4.0.5
+
 
 flutter:
 

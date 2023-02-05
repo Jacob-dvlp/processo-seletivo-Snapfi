@@ -10,7 +10,7 @@ void main() async {
 
       expect(find.byType(HomePage), findsOneWidget);
 
-      expect(find.byKey(const Key("saldodisponivel")), findsOneWidget);
+      expect(find.byKey(const Key("home")), findsOneWidget);
 
       expect(find.byKey(const Key("saldonaconta")), findsOneWidget);
 

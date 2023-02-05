@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 import '../../helpers/app_helpe.dart';
+import '../../helpers/app_hex_color.dart';
 import '../../style/style_box_decoration.dart';
 import '../../style/style_text.dart';
 

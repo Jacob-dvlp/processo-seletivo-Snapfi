@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+import 'package:pix_snapfi_app/style/style_box_decoration.dart';
 
-import '../../../helpers/app_helpe.dart';
-import '../../../style/style_box_decoration.dart';
-import '../../../style/style_text.dart';
-import '../../widget/custom_card_widge.dart';
+import 'imports.dart';
 
 class HomePageCustomPayWidget extends StatelessWidget {
   final String valueColorTextH1;
@@ -55,7 +51,9 @@ class HomePageCustomPayWidget extends StatelessWidget {
                           key: const Key("textchavepix"),
                           "USAR CHAVE PIX",
                           style: context.style.textLight(
-                              HexColor(valueColorTextH1), FontWeight.bold, 12),
+                              HexColor(valueColorIconsPay),
+                              FontWeight.bold,
+                              12),
                         ),
                         const SizedBox(
                           height: 9,

@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-
-import '../../../style/style_text.dart';
-import '../../widget/costum_painter_widget.dart';
+import 'imports.dart';
 
 class HomePageCustomHeaderWidget extends StatelessWidget {
   final String primaryColor;
@@ -46,8 +42,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                     Text(
                       key: const Key("saldodisponivel"),
                       "Saldo Disponível",
-                      style: context.style
-                          .textExtraBold(HexColor(colortext), FontWeight.w700, 23),
+                      style: context.style.textExtraBold(
+                          HexColor(colortext), FontWeight.w700, 23),
                     ),
                     SizedBox(
                       child: Image.asset("assets/icons/cultar.png"),
@@ -67,16 +63,16 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                           Text(
                             "Saldo na conta",
                             key: const Key("saldonaconta"),
-                            style:
-                                context.style.textMedium(HexColor(colortext), 12),
+                            style: context.style
+                                .textMedium(HexColor(colortext), 12),
                           ),
                           const SizedBox(
                             height: 7.0,
                           ),
                           Text(
                             "R\$•••••••••",
-                            style:
-                                context.style.textMedium(HexColor(colortext), 15),
+                            style: context.style
+                                .textMedium(HexColor(colortext), 15),
                           )
                         ],
                       ),
@@ -99,8 +95,8 @@ class HomePageCustomHeaderWidget extends StatelessWidget {
                           ),
                           Text(
                             "R\$•••••••••",
-                            style:
-                                context.style.textMedium(HexColor(colortext), 15),
+                            style: context.style
+                                .textMedium(HexColor(colortext), 15),
                           )
                         ],
                       ),

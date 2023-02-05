@@ -3,8 +3,8 @@
           "container1": {
           "ui": "HomePageCustomHeaderWidget",
           "colortext": "FFFFFF",
-           "primaryColor": "FF5CBD",
-           "secondaryColor": "D33091"
+           "primaryColor": "D33091",
+           "secondaryColor": "FF5CBD"
       },
           "container2": {
           "ui": "HomePageCustomPayWidget",
@@ -20,8 +20,8 @@
       },
         "container4": {
         "ui": "HomePageCustomFooterWidget",
-        "colorFooterHex": "000000"
-    }
+        "colorFooterHex": "D33091"
+     }
 
     }
   ]

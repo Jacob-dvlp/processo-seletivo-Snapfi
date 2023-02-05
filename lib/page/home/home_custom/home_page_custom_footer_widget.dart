@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../widget/custom_card_widge.dart';
+import 'imports.dart';
 
 class HomePageCustomFooterWidget extends StatelessWidget {
   final String colorFooterHex;

@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'custom/limit_page_custom_body_widgets.dart';
+import 'limit_custom/import.dart';
 
 class LimitPage extends StatelessWidget {
   const LimitPage({super.key});

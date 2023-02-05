@@ -1,14 +1,11 @@
-import 'package:flutter/material.dart';
-
-import '../../style/style_buttom.dart';
-import '../../style/style_input_decoration.dart';
-import '../../style/style_text.dart';
+import '../home/home_custom/imports.dart';
+import 'imports.dart';
 
 class CustomFormWidget extends StatefulWidget {
   final String textdiurno;
   final String textnoturno;
-  final int colorBtnHex;
-  final int colortextForm;
+  final String colorBtnHex;
+  final String colortextForm;
 
   const CustomFormWidget(
       {super.key,
@@ -31,7 +28,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
         textControllerNoturno.text.isEmpty) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          backgroundColor: Color(widget.colorBtnHex),
+          backgroundColor: HexColor(widget.colorBtnHex),
           duration: const Duration(seconds: 3),
           content: const Text("Campos vazios não são permetidos"),
         ),
@@ -59,8 +56,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
         children: [
           Text(
             "Limite do período diurno",
-            style: context.style
-                .textSemiBold(FontWeight.w600, Color(widget.colortextForm), 20),
+            style: context.style.textSemiBold(
+                FontWeight.w600, HexColor(widget.colortextForm), 20),
           ),
           const SizedBox.square(
             dimension: 24,
@@ -75,7 +72,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
               controller: textControllerDiurno,
               keyboardType: TextInputType.number,
               cursorColor: const Color(0XFF02020A),
-              style: context.style.textMedium(Color(widget.colortextForm), 15),
+              style:
+                  context.style.textMedium(HexColor(widget.colortextForm), 15),
               decoration: context.input.inputDecoration(labelText: true),
             ),
           ),
@@ -84,8 +82,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
           ),
           Text(
             "Limite do período noturno",
-            style: context.style
-                .textSemiBold(FontWeight.w600, Color(widget.colortextForm), 20),
+            style: context.style.textSemiBold(
+                FontWeight.w600, HexColor(widget.colortextForm), 20),
           ),
           const SizedBox.square(
             dimension: 24,
@@ -100,7 +98,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
               controller: textControllerNoturno,
               keyboardType: TextInputType.number,
               cursorColor: const Color(0XFF02020A),
-              style: context.style.textMedium(Color(widget.colortextForm), 15),
+              style:
+                  context.style.textMedium(HexColor(widget.colortextForm), 15),
               decoration: context.input.inputDecoration(labelText: true),
             ),
           ),
@@ -123,8 +122,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
                   key: const Key("formfieldh1"),
                   keyboardType: TextInputType.number,
                   initialValue: "18:00",
-                  style:
-                      context.style.textMedium(Color(widget.colortextForm), 15),
+                  style: context.style
+                      .textMedium(HexColor(widget.colortextForm), 15),
                   decoration: context.input.inputDecoration(labelText: false),
                 ),
               ),
@@ -138,8 +137,8 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
                   key: const Key("formfieldh2"),
                   keyboardType: TextInputType.number,
                   initialValue: "18:00",
-                  style:
-                      context.style.textMedium(Color(widget.colortextForm), 15),
+                  style: context.style
+                      .textMedium(HexColor(widget.colortextForm), 15),
                   decoration: context.input.inputDecoration(labelText: false),
                 ),
               )
@@ -153,7 +152,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
                   ? ElevatedButton(
                       key: const Key("formBtn"),
                       style: context.decorationButtom
-                          .primaryBotton(Color(widget.colorBtnHex)),
+                          .primaryBotton(HexColor(widget.colorBtnHex)),
                       onPressed: () {
                         save();
                       },
@@ -166,7 +165,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
                   : Center(
                       child: CircularProgressIndicator(
                         key: const Key("progress"),
-                        backgroundColor: Color(widget.colorBtnHex),
+                        backgroundColor: HexColor(widget.colorBtnHex),
                         color: Colors.white,
                       ),
                     ),
