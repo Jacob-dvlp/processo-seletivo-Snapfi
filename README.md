@@ -30,9 +30,9 @@
  ⚙ -- flutter pub get <br>
  #fazer o donwload dos pacotes do flutter <br>
  ⚙ -- flutter run ou F5 <br>
- #Rodar o projeto
+ #Rodar o projeto  <br>
  ⚙ -- flutter test <br>
- #Rodar os testes  existente no projeto como teste de unidade, teste de Widgets e no final teste de integraçao
+ #Rodar os testes  existente no projeto como teste de unidade, teste de Widgets e no final teste de integraçao  <br>
 
  #Executar o projeto pelo Android Studio ou Visual Studio code <br>
  
