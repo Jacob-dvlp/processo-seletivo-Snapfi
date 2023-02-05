@@ -10,27 +10,13 @@ class HomePageCustomBodyWidgets extends StatefulWidget {
 
 class _HomePageCustomBodyWidgetsState extends State<HomePageCustomBodyWidgets> {
   List<Widget> renderWidegetHome = [];
-  bool isViblityUI = true;
 
   buildWigets() async {
-    Future.delayed(
-      const Duration(seconds: 5),
-      () async {
-        isLoading(true);
-        final myWidgetjson =
-            await RepositoryServerDriveUIHomePage().getJsonHomePage();
-        setState(() {
-          renderWidegetHome =
-              RepositoryServerDriveUIHomePage().createUIHomePage(myWidgetjson);
-        });
-        isLoading(false);
-      },
-    );
-  }
-
-  isLoading(bool value) {
+    final myWidgetjson =
+        await RepositoryServerDriveUIHomePage().getJsonHomePage();
     setState(() {
-      isViblityUI = value;
+      renderWidegetHome =
+          RepositoryServerDriveUIHomePage().createUIHomePage(myWidgetjson);
     });
   }
 
@@ -43,15 +29,7 @@ class _HomePageCustomBodyWidgetsState extends State<HomePageCustomBodyWidgets> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: isViblityUI
-            ? const Center(
-                child: Padding(
-                padding: EdgeInsets.only(top: 350),
-                child: CircularProgressIndicator(
-                  backgroundColor: Colors.black,
-                  color: Colors.white,
-                ),
-              ))
-            : Column(key: const Key("home"), children: [...renderWidegetHome]));
+        child:
+            Column(key: const Key("home"), children: [...renderWidegetHome]));
   }
 }

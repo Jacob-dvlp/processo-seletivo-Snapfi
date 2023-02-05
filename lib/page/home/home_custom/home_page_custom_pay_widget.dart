@@ -1,5 +1,4 @@
-import 'package:pix_snapfi_app/style/style_box_decoration.dart';
-
+import '../../../style/style_box_decoration.dart';
 import 'imports.dart';
 
 class HomePageCustomPayWidget extends StatelessWidget {

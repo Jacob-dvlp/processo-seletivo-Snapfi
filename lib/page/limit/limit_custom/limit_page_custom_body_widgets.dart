@@ -14,24 +14,17 @@ class _LimitPageCustomBodyWidgetsState
   Widget? renderWidegetForm;
   bool isViblityUI = true;
 
-  buildWidgets() {
-    Future.delayed(const Duration(seconds: 5), () async {
-      isLoading(true);
+  buildWidgets()async {
       final myWidgetjson =
           await RepositoryServerDriveUiLimitePage().getJsonLimitePage();
       setState(() {
         renderWidegetForm = RepositoryServerDriveUiLimitePage()
             .createUILimitePage(myWidgetjson);
       });
-      isLoading(false);
-    });
+  
   }
 
-  isLoading(bool value) {
-    setState(() {
-      isViblityUI = value;
-    });
-  }
+ 
 
   @override
   void initState() {
@@ -44,13 +37,7 @@ class _LimitPageCustomBodyWidgetsState
     return SafeArea(
       child: Padding(
           padding: const EdgeInsets.only(top: 21.25, left: 12),
-          child: isViblityUI
-              ? const Center(
-                  child: CircularProgressIndicator(
-                  backgroundColor: Colors.black,
-                  color: Colors.white,
-                ))
-              : renderWidegetForm),
+          child: renderWidegetForm),
     );
   }
 }

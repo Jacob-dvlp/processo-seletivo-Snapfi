@@ -1,3 +1,4 @@
+import '../../page/home/home_custom/imports.dart';
 import 'imports.dart';
 
 class RepositoryServerDriveUIHomePage {
@@ -7,6 +8,7 @@ class RepositoryServerDriveUIHomePage {
     final responseUI = await rootBundle
         .loadString("assets/json/serve_drive_ui_home_page.json");
     final views = serverDriveUiFromJson(responseUI);
+    print(views);
     return views;
   }
 
@@ -41,6 +43,13 @@ class RepositoryServerDriveUIHomePage {
             colorFooterHex: ui.container4.colorFooterHex,
           )
         ],
+      );
+    } else {
+      return const Padding(
+        padding: EdgeInsets.only(top: 350),
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
       );
     }
   }
