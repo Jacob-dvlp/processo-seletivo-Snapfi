@@ -4,6 +4,7 @@ import 'package:pix_snapfi_app/main.dart' as app;
 import 'package:pix_snapfi_app/page/home/home_custom/imports.dart';
 import 'package:pix_snapfi_app/page/home/home_page.dart';
 import 'package:pix_snapfi_app/page/limit/limit_page.dart';
+import 'package:pix_snapfi_app/src/repository/imports.dart';
 
 void main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,6 @@ void main() async {
       await tester.pumpAndSettle();
 
       expect(find.byType(HomePage), findsOneWidget);
-      
     });
   });
 }

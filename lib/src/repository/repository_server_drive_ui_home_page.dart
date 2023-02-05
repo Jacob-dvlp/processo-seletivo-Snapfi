@@ -8,7 +8,6 @@ class RepositoryServerDriveUIHomePage {
     final responseUI = await rootBundle
         .loadString("assets/json/serve_drive_ui_home_page.json");
     final views = serverDriveUiFromJson(responseUI);
-    print(views);
     return views;
   }
 
