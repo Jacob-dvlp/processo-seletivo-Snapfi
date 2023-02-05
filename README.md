@@ -5,7 +5,6 @@
 
 <b>UI Pix snapfi_app </b>   
 
-![cap](https://github.com/Jacob-dvlp/clean-architecture-flutter/blob/master/cap.jpg)
 
 
 <p> Este aplicativo  tem como objetivo  simular transferencias  via PIX  e consular o saldo disponivel na conta</b>  </p>
