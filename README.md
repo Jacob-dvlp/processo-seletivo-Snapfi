@@ -3,11 +3,10 @@
 
 
 
-<b>UI Pix snapfi_app </b>   
+<b>UI Pix snapfi_app  </b>   
 
 
-
-<p> Este aplicativo  tem como objetivo  simular transferencias  via PIX  e consular o saldo disponivel na conta</b>  </p>
+<p> Este aplicativo  tem como objetivo  simular transferencias  via PIX  e consular o saldo disponivel na conta e também foi aplicado o Serve Drive UI</b>  </p>
 
 ## 📚 Telas que fazem parte do aplicativo.
 
