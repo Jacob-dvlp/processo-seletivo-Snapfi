@@ -5,7 +5,8 @@ import 'package:pix_snapfi_app/main.dart' as app;
 import 'package:pix_snapfi_app/page/home/home_page.dart';
 import 'package:pix_snapfi_app/page/limit/limit_page.dart';
 
-void main() {
+
+void main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   group("Test E2E Test", () {
     testWidgets(
@@ -14,7 +15,6 @@ void main() {
       app.main();
 
       await tester.pumpAndSettle();
-
       expect(find.byType(HomePage), findsOneWidget);
 
       var next = find.byKey(const Key("nextpage"));

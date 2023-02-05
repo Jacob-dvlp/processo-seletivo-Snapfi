@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708036214035",
+    "project_id": "pix-snapfi",
+    "storage_bucket": "pix-snapfi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708036214035:android:d43d6458d67311bffa2ee6",
+        "android_client_info": {
+          "package_name": "com.example.pix_snapfi_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708036214035-g7f0h608j4od3i16ruooi6gb36nd37s2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ2aHJPTAyrlD0ictL4AlXvHXTNWU--G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708036214035-g7f0h608j4od3i16ruooi6gb36nd37s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

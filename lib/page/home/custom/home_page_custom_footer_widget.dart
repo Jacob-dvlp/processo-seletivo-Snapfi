@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../widget/custom_card_widge.dart';
 
 class HomePageCustomFooterWidget extends StatelessWidget {
-  final int colorFooterHex;
+  final String colorFooterHex;
   const HomePageCustomFooterWidget({Key? key, required this.colorFooterHex})
       : super(key: key);
 

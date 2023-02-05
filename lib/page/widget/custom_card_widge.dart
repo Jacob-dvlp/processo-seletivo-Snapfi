@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import '../../helpers/app_helpe.dart';
 import '../../style/style_box_decoration.dart';
@@ -52,7 +53,7 @@ class CustomCardWidge extends StatelessWidget {
 
 class CustomCardWidgefooter extends StatelessWidget {
   final String text;
-  final int colorFooterHex;
+  final String colorFooterHex;
   const CustomCardWidgefooter(
       {Key? key, required this.text, required this.colorFooterHex})
       : super(key: key);
@@ -70,12 +71,12 @@ class CustomCardWidgefooter extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: context.style
-                    .textExtraBold(Color(colorFooterHex), FontWeight.w700, 12),
+                style: context.style.textExtraBold(
+                    HexColor(colorFooterHex), FontWeight.w700, 12),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: Color(colorFooterHex),
+                color: HexColor(colorFooterHex),
               )
             ],
           ),

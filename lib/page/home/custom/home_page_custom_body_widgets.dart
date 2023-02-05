@@ -1,42 +1,33 @@
 import 'package:flutter/material.dart';
 
-import 'home_page_custom_footer_widget.dart';
-import 'home_page_custom_header_widget.dart';
-import 'home_page_custom_pay_widget.dart';
-import 'home_page_custom_received.dart';
+import '../../../src/repository/repository_server_drive.dart';
 
-class HomePageCustomBodyWidgets extends StatelessWidget {
+class HomePageCustomBodyWidgets extends StatefulWidget {
   const HomePageCustomBodyWidgets({Key? key}) : super(key: key);
 
   @override
+  State<HomePageCustomBodyWidgets> createState() =>
+      _HomePageCustomBodyWidgetsState();
+}
+
+class _HomePageCustomBodyWidgetsState extends State<HomePageCustomBodyWidgets> {
+  List<Widget> serverDriveUI = [];
+
+  getVl() async {
+    final myWidgetjson = await RepositoryServerDriveUI().init();
+    setState(() {
+      serverDriveUI = RepositoryServerDriveUI().createUI(myWidgetjson);
+    });
+  }
+
+  @override
+  void initState() {
+    getVl();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          HomePageCustomHeaderWidget(
-            key: Key("headerhome"),
-            colortext: 0xFFFFFFFF,
-            primaryColor: 0XFFFF5CBD,
-            secondaryColor: 0XFFD33091,
-          ),
-          HomePageCustomPayWidget(
-            key: Key("bodyhome1"),
-            valueColorIconsPay: 0XFFFF5CBD,
-            valueColorTextH1: 0xFF000000,
-            valueColorTextH2: 0xFF000000,
-          ),
-          HomePageCustomReceived(
-            key: Key("bodyhome2"),
-            colorIconHex: 0xFF000000,
-            colorTextHex: 0xFF000000,
-          ),
-          HomePageCustomFooterWidget(
-            key: Key("footerhome"),
-            colorFooterHex: 0XFFD33091,
-          )
-        ],
-      ),
-    );
+    return Column(children: [...serverDriveUI]);
   }
 }

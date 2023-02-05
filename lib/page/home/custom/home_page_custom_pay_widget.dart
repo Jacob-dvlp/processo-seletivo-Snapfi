@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import '../../../helpers/app_helpe.dart';
 import '../../../style/style_box_decoration.dart';
@@ -6,9 +7,9 @@ import '../../../style/style_text.dart';
 import '../../widget/custom_card_widge.dart';
 
 class HomePageCustomPayWidget extends StatelessWidget {
-  final int valueColorTextH1;
-  final int valueColorTextH2;
-  final int valueColorIconsPay;
+  final String valueColorTextH1;
+  final String valueColorTextH2;
+  final String valueColorIconsPay;
   const HomePageCustomPayWidget(
       {Key? key,
       required this.valueColorTextH1,
@@ -30,7 +31,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
             key: const Key("textpegar"),
             "Pagar",
             style: context.style
-                .textExtraBold(Color(valueColorTextH1), FontWeight.w600, 20),
+                .textExtraBold(HexColor(valueColorTextH1), FontWeight.w600, 20),
           ),
           Card(
             shape: context.decorationBox.decoration(12),
@@ -54,7 +55,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                           key: const Key("textchavepix"),
                           "USAR CHAVE PIX",
                           style: context.style.textLight(
-                              Color(valueColorTextH1), FontWeight.bold, 12),
+                              HexColor(valueColorTextH1), FontWeight.bold, 12),
                         ),
                         const SizedBox(
                           height: 9,
@@ -63,7 +64,7 @@ class HomePageCustomPayWidget extends StatelessWidget {
                           key: const Key("textcpf"),
                           "CPF/CNPJ, e-mail, telefone ou outra chave",
                           style: context.style.textLight(
-                            Color(valueColorTextH2),
+                            HexColor(valueColorTextH2),
                             FontWeight.w300,
                             13,
                           ),
@@ -80,19 +81,19 @@ class HomePageCustomPayWidget extends StatelessWidget {
             children: [
               CustomCardWidge(
                 img: Image.asset("assets/icons/icon_home1.png",
-                    color: Color(valueColorIconsPay)),
+                    color: HexColor(valueColorIconsPay)),
                 text: "Ler QR CODE",
                 key: const Key("textqrcode"),
               ),
               CustomCardWidge(
                 img: Image.asset("assets/icons/icon_home3.png",
-                    color: Color(valueColorIconsPay)),
+                    color: HexColor(valueColorIconsPay)),
                 text: "Pix Copiar e Colar",
                 key: const Key("textcopiar"),
               ),
               CustomCardWidge(
                 img: Image.asset("assets/icons/icon_home_dolar1.png",
-                    color: Color(valueColorIconsPay)),
+                    color: HexColor(valueColorIconsPay)),
                 text: "Pagar Boleto",
                 key: const Key("textboleto"),
               )

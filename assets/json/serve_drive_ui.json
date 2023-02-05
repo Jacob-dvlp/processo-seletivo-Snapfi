@@ -1,0 +1,29 @@
+[
+    {
+          "container1": {
+          "ui": "HomePageCustomHeaderWidget",
+          "colortext": "FFFFFF",
+           "primaryColor": "FF5CBD",
+           "secondaryColor": "D33091"
+      },
+          "container2": {
+          "ui": "HomePageCustomPayWidget",
+          "valueColorIconsPay": "D33091",
+          "valueColorTextH1": "26262D",
+          "valueColorTextH2": "02020A"
+      },
+        "container3": {
+        "ui": "HomePageCustomReceived",
+        "colorIconHex": "2929F5",
+        "colorTextHex": "4A4A50"
+
+      },
+        "container4": {
+        "ui": "HomePageCustomFooterWidget",
+        "colorFooterHex": "000000"
+    }
+
+    }
+  ]
+  
+  

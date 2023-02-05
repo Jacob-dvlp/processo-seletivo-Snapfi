@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pix_snapfi_app/app_page.dart';
 import 'package:pix_snapfi_app/page/home/home_page.dart';
 
-void main() {
+void main() async {
   group(" Test Header widget", () {
     testWidgets('HomePage header widgets', (WidgetTester tester) async {
       await tester.pumpWidget(const AppPage());
