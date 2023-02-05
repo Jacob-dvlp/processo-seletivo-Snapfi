@@ -17,7 +17,6 @@ dependencies:
   cupertino_icons: ^1.0.2
  
   
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -26,18 +25,12 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
-
 flutter:
 
-
   uses-material-design: true
-
   assets:
     - assets/icons/
     - assets/json/
-
-
-
   fonts:
     - family: Poppins
       fonts:
@@ -50,6 +43,4 @@ flutter:
         - asset: assets/fonts/Poppins/Poppins-Light.ttf
           weight: 300
    
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+

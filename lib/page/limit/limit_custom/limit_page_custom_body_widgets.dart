@@ -11,20 +11,17 @@ class LimitPageCustomBodyWidgets extends StatefulWidget {
 
 class _LimitPageCustomBodyWidgetsState
     extends State<LimitPageCustomBodyWidgets> {
-  Widget? renderWidegetForm;
-  bool isViblityUI = true;
+  Widget? renderWidegetsForm;
 
   buildWidgets()async {
       final myWidgetjson =
           await RepositoryServerDriveUiLimitePage().getJsonLimitePage();
       setState(() {
-        renderWidegetForm = RepositoryServerDriveUiLimitePage()
+        renderWidegetsForm = RepositoryServerDriveUiLimitePage()
             .createUILimitePage(myWidgetjson);
       });
   
   }
-
- 
 
   @override
   void initState() {
@@ -37,7 +34,7 @@ class _LimitPageCustomBodyWidgetsState
     return SafeArea(
       child: Padding(
           padding: const EdgeInsets.only(top: 21.25, left: 12),
-          child: renderWidegetForm),
+          child: renderWidegetsForm),
     );
   }
 }

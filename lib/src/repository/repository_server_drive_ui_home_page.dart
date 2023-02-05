@@ -48,7 +48,10 @@ class RepositoryServerDriveUIHomePage {
       return const Padding(
         padding: EdgeInsets.only(top: 350),
         child: Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(
+            backgroundColor: Colors.black,
+            color: Colors.white,
+          ),
         ),
       );
     }

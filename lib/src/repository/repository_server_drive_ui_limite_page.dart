@@ -38,6 +38,14 @@ class RepositoryServerDriveUiLimitePage {
           ],
         ),
       );
+    } else {
+      return const Center(
+        child: CircularProgressIndicator(
+          key: Key("circluar2"),
+          backgroundColor: Colors.black,
+          color: Colors.white,
+        ),
+      );
     }
   }
 }

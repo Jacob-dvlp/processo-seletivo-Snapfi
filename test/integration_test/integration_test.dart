@@ -8,8 +8,7 @@ import 'package:pix_snapfi_app/page/limit/limit_page.dart';
 void main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   group("Test E2E", () {
-    testWidgets(
-        "Clique no botão <Configurar Limites Pix> pra  ir na proxima tela e simular uma transferencia e voltar na Home Page",
+    testWidgets("Simular uma transferencia e voltar na Home Page",
         (WidgetTester tester) async {
       app.main();
       await tester.pumpAndSettle();
